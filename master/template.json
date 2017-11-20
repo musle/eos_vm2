@@ -1,0 +1,899 @@
+{
+  "device": [
+    {
+      "name": "DEBUG",
+      "addr": [
+        {
+          "func": 3,
+          "addr": 0,
+          "wrod": 4,
+          "format": "",
+          "alias": "DUMP"
+        }
+      ]
+    },
+    {
+      "name": "PM5350",
+      "addr": [
+        {
+          "func": 3,
+          "addr": 2999,
+          "word": 2,
+          "format": "float",
+          "alias": "A相電流"
+        },
+        {
+          "func": 3,
+          "addr": 3001,
+          "word": 2,
+          "format": "float",
+          "alias": "B相電流"
+        },
+        {
+          "func": 3,
+          "addr": 3003,
+          "word": 2,
+          "format": "float",
+          "alias": "C相電流"
+        },
+        {
+          "func": 3,
+          "addr": 3009,
+          "word": 2,
+          "format": "float",
+          "alias": "平均相電流"
+        },
+        {
+          "func": 3,
+          "addr": 3019,
+          "word": 2,
+          "format": "float",
+          "alias": "A線電壓"
+        },
+        {
+          "func": 3,
+          "addr": 3021,
+          "word": 2,
+          "format": "float",
+          "alias": "B線電壓"
+        },
+        {
+          "func": 3,
+          "addr": 3023,
+          "word": 2,
+          "format": "float",
+          "alias": "C線電壓"
+        },
+        {
+          "func": 3,
+          "addr": 3025,
+          "word": 2,
+          "format": "float",
+          "alias": "平均線電壓"
+        },
+        {
+          "func": 3,
+          "addr": 3027,
+          "word": 2,
+          "format": "float",
+          "alias": "A相電壓"
+        },
+        {
+          "func": 3,
+          "addr": 3029,
+          "word": 2,
+          "format": "float",
+          "alias": "B相電壓"
+        },
+        {
+          "func": 3,
+          "addr": 3031,
+          "word": 2,
+          "format": "float",
+          "alias": "C相電壓"
+        },
+        {
+          "func": 3,
+          "addr": 3035,
+          "word": 2,
+          "format": "float",
+          "alias": "平均相電壓"
+        },
+        {
+          "func": 3,
+          "addr": 3053,
+          "word": 2,
+          "format": "float",
+          "alias": "A相有效功率W"
+        },
+        {
+          "func": 3,
+          "addr": 3055,
+          "word": 2,
+          "format": "float",
+          "alias": "B相有效功率W"
+        },
+        {
+          "func": 3,
+          "addr": 3057,
+          "word": 2,
+          "format": "float",
+          "alias": "C相有效功率W"
+        },
+        {
+          "func": 3,
+          "addr": 3059,
+          "word": 2,
+          "format": "float",
+          "alias": "總有效功率W"
+        },
+        {
+          "func": 3,
+          "addr": 3061,
+          "word": 2,
+          "format": "float",
+          "alias": "A相虛功率VAR"
+        },
+        {
+          "func": 3,
+          "addr": 3063,
+          "word": 2,
+          "format": "float",
+          "alias": "B相虛功率VAR"
+        },
+        {
+          "func": 3,
+          "addr": 3065,
+          "word": 2,
+          "format": "float",
+          "alias": "C相虛功率VAR"
+        },
+        {
+          "func": 3,
+          "addr": 3067,
+          "word": 2,
+          "format": "float",
+          "alias": "總虛功率VAR"
+        },
+        {
+          "func": 3,
+          "addr": 3069,
+          "word": 2,
+          "format": "float",
+          "alias": "A相視在功率VA"
+        },
+        {
+          "func": 3,
+          "addr": 3071,
+          "word": 2,
+          "format": "float",
+          "alias": "B相視在功率VA"
+        },
+        {
+          "func": 3,
+          "addr": 3073,
+          "word": 4,
+          "format": "float",
+          "alias": "C相視在功率VA"
+        },
+        {
+          "func": 3,
+          "addr": 3075,
+          "word": 2,
+          "format": "float",
+          "alias": "總視在功率VA"
+        },
+        {
+          "func": 3,
+          "addr": 3077,
+          "word": 2,
+          "format": "float",
+          "alias": "A相功因PF"
+        },
+        {
+          "func": 3,
+          "addr": 3079,
+          "word": 2,
+          "format": "float",
+          "alias": "B相功因PF"
+        },
+        {
+          "func": 3,
+          "addr": 3081,
+          "word": 2,
+          "format": "float",
+          "alias": "C相功因PF"
+        },
+        {
+          "func": 3,
+          "addr": 3083,
+          "word": 2,
+          "format": "float",
+          "alias": "功率因數PF"
+        },
+        {
+          "func": 3,
+          "addr": 3109,
+          "word": 2,
+          "format": "float",
+          "alias": "頻率HZ"
+        },
+        {
+          "func": 3,
+          "addr": 3203,
+          "word": 4,
+          "format": "uint",
+          "alias": "總累計電量KWH"
+        }
+      ]
+    },
+    {
+      "name": "DM2436",
+      "addr": [
+        {
+          "func": 3,
+          "addr": 0,
+          "word": 4,
+          "format": "uint",
+          "alias": "A相電壓(mV)"
+        },
+        {
+          "func": 3,
+          "addr": 4,
+          "word": 4,
+          "format": "uint",
+          "alias": "A相電流(mA)"
+        },
+        {
+          "func": 3,
+          "addr": 8,
+          "word": 4,
+          "format": "uint",
+          "alias": "A相視在功率(mVA)"
+        },
+        {
+          "func": 3,
+          "addr": 12,
+          "word": 4,
+          "format": "uint",
+          "alias": "A相有效功率(mW)"
+        },
+        {
+          "func": 3,
+          "addr": 16,
+          "word": 4,
+          "format": "uint",
+          "alias": "A相虛功率(mVar)"
+        },
+        {
+          "func": 3,
+          "addr": 20,
+          "word": 4,
+          "format": "uint",
+          "alias": "A相功因"
+        },
+        {
+          "func": 3,
+          "addr": 24,
+          "word": 4,
+          "format": "uint",
+          "alias": "頻率(mHZ)"
+        },
+        {
+          "func": 3,
+          "addr": 28,
+          "word": 4,
+          "format": "uint",
+          "alias": "A相累計電量(WH)"
+        },
+        {
+          "func": 3,
+          "addr": 36,
+          "word": 4,
+          "format": "uint",
+          "alias": "B相電壓(mV)"
+        },
+        {
+          "func": 3,
+          "addr": 40,
+          "word": 4,
+          "format": "uint",
+          "alias": "B相電流(mA)"
+        },
+        {
+          "func": 3,
+          "addr": 44,
+          "word": 4,
+          "format": "uint",
+          "alias": "B相視在功率((mVA)"
+        },
+        {
+          "func": 3,
+          "addr": 48,
+          "word": 4,
+          "format": "uint",
+          "alias": "B相有效功率(mW)"
+        },
+        {
+          "func": 3,
+          "addr": 52,
+          "word": 4,
+          "format": "uint",
+          "alias": "B相虛功率(mVAR)"
+        },
+        {
+          "func": 3,
+          "addr": 56,
+          "word": 4,
+          "format": "uint",
+          "alias": "B相功因"
+        },
+        {
+          "func": 3,
+          "addr": 64,
+          "word": 4,
+          "format": "uint",
+          "alias": "B相累計電量(WH)"
+        },
+        {
+          "func": 3,
+          "addr": 72,
+          "word": 4,
+          "format": "uint",
+          "alias": "C相電壓(mV)"
+        },
+        {
+          "func": 3,
+          "addr": 76,
+          "word": 4,
+          "format": "uint",
+          "alias": "C相電流(mA)"
+        },
+        {
+          "func": 3,
+          "addr": 80,
+          "word": 4,
+          "format": "uint",
+          "alias": "C相視在功率(mVA)"
+        },
+        {
+          "func": 3,
+          "addr": 84,
+          "word": 4,
+          "format": "uint",
+          "alias": "C相有效功率(mW)"
+        },
+        {
+          "func": 3,
+          "addr": 88,
+          "word": 4,
+          "format": "uint",
+          "alias": "C相虛功率(mVar)"
+        },
+        {
+          "func": 3,
+          "addr": 92,
+          "word": 4,
+          "format": "uint",
+          "alias": "C相功因"
+        },
+        {
+          "func": 3,
+          "addr": 100,
+          "word": 4,
+          "format": "uint",
+          "alias": "C相累計電量(WH)"
+        },
+        {
+          "func": 3,
+          "addr": 108,
+          "word": 4,
+          "format": "uint",
+          "alias": "平均相電壓(mV)"
+        },
+        {
+          "func": 3,
+          "addr": 112,
+          "word": 4,
+          "format": "uint",
+          "alias": "平均相電流(ma)"
+        },
+        {
+          "func": 3,
+          "addr": 116,
+          "word": 4,
+          "format": "uint",
+          "alias": "總視在功率(mV)"
+        },
+        {
+          "func": 3,
+          "addr": 120,
+          "word": 4,
+          "format": "uint",
+          "alias": "總有效功率(mW)"
+        },
+        {
+          "func": 3,
+          "addr": 124,
+          "word": 4,
+          "format": "uint",
+          "alias": "總虛功率(mVAR)"
+        },
+        {
+          "func": 3,
+          "addr": 128,
+          "word": 4,
+          "format": "uint",
+          "alias": "功率因數"
+        },
+        {
+          "func": 3,
+          "addr": 132,
+          "word": 4,
+          "format": "uint",
+          "alias": "總累計電量(WH)"
+        },
+        {
+          "func": 3,
+          "addr": 140,
+          "word": 4,
+          "format": "uint",
+          "alias": "A線電壓(mV)"
+        },
+        {
+          "func": 3,
+          "addr": 144,
+          "word": 4,
+          "format": "uint",
+          "alias": "B線電壓(mV)"
+        },
+        {
+          "func": 3,
+          "addr": 148,
+          "word": 4,
+          "format": "uint",
+          "alias": "C線電壓(mV)"
+        }
+      ]
+    },
+    {
+      "name": "RPIH3-GRID",
+      "addr": [
+        {
+          "func": 6,
+          "addr": 800,
+          "word": 1,
+          "format": "float",
+          "alias": "Measurement Index"
+        },
+        {
+          "func": 3,
+          "addr": 1047,
+          "word": 1,
+          "format": "uint",
+          "alias": "Convert Status"
+        },
+        {
+          "func": 3,
+          "addr": 1056,
+          "word": 1,
+          "format": "uint",
+          "alias": "交流電壓(0.1V)"
+        },
+        {
+          "func": 3,
+          "addr": 1057,
+          "word": 1,
+          "format": "uint",
+          "alias": "交流電流(0.01A)"
+        },
+        {
+          "func": 3,
+          "addr": 1058,
+          "word": 1,
+          "format": "uint",
+          "alias": "交流功率(W)"
+        },
+        {
+          "func": 3,
+          "addr": 1059,
+          "word": 1,
+          "format": "uint",
+          "alias": "交流頻率"
+        },
+        {
+          "func": 3,
+          "addr": 1075,
+          "word": 2,
+          "format": "uint",
+          "alias": "直流電量1(10WH)"
+        },
+        {
+          "func": 3,
+          "addr": 1079,
+          "word": 1,
+          "format": "uint",
+          "alias": "散熱溫度1"
+        },
+        {
+          "func": 3,
+          "addr": 1080,
+          "word": 1,
+          "format": "uint",
+          "alias": "散熱溫度2"
+        },
+        {
+          "func": 3,
+          "addr": 1081,
+          "word": 1,
+          "format": "uint",
+          "alias": "散熱溫度3"
+        }
+      ]
+    },
+    {
+      "name": "RPIH3-DC1",
+      "addr": [
+        {
+          "func": 6,
+          "addr": 800,
+          "word": 1,
+          "format": "uint",
+          "alias": "Measurement Index-DC1"
+        },
+        {
+          "func": 3,
+          "addr": 1047,
+          "word": 1,
+          "format": "uint",
+          "alias": "Convert Status"
+        },
+        {
+          "func": 3,
+          "addr": 1056,
+          "word": 1,
+          "format": "uint",
+          "alias": "直流電壓1"
+        },
+        {
+          "func": 3,
+          "addr": 1057,
+          "word": 1,
+          "format": "uint",
+          "alias": "直流電流1"
+        },
+        {
+          "func": 3,
+          "addr": 1058,
+          "word": 1,
+          "format": "uint",
+          "alias": "直流功率1"
+        },
+        {
+          "func": 3,
+          "addr": 1075,
+          "word": 2,
+          "format": "uint",
+          "alias": "直流電量1"
+        },
+        {
+          "func": 3,
+          "addr": 1079,
+          "word": 1,
+          "format": "uint",
+          "alias": "散熱溫度1"
+        },
+        {
+          "func": 3,
+          "addr": 1080,
+          "word": 1,
+          "format": "uint",
+          "alias": "散熱溫度2"
+        },
+        {
+          "func": 3,
+          "addr": 1081,
+          "word": 1,
+          "format": "uint",
+          "alias": "散熱溫度3"
+        }
+      ]
+    },
+    {
+      "name": "Conext-XW+",
+      "addr": [
+        {
+          "func": 3,
+          "addr": 79,
+          "word": 2,
+          "format": "float",
+          "alias": "直流電壓1"
+        },
+        {
+          "func": 3,
+          "addr": 81,
+          "word": 2,
+          "format": "float",
+          "alias": "直流電流1"
+        },
+        {
+          "func": 3,
+          "addr": 83,
+          "word": 2,
+          "format": "float",
+          "alias": "直流功率1"
+        },
+        {
+          "func": 3,
+          "addr": 85,
+          "word": 1,
+          "format": "float",
+          "alias": "散熱溫度"
+        },
+        {
+          "func": 3,
+          "addr": 139,
+          "word": 2,
+          "format": "float",
+          "alias": "交流電壓"
+        },
+        {
+          "func": 3,
+          "addr": 141,
+          "word": 2,
+          "format": "float",
+          "alias": "L1 交流電壓"
+        },
+        {
+          "func": 3,
+          "addr": 143,
+          "word": 2,
+          "format": "float",
+          "alias": "L2 交流電壓"
+        },
+        {
+          "func": 3,
+          "addr": 145,
+          "word": 2,
+          "format": "float",
+          "alias": "L1 交流電流"
+        },
+        {
+          "func": 3,
+          "addr": 147,
+          "word": 2,
+          "format": "float",
+          "alias": "L2 交流電流"
+        },
+        {
+          "func": 3,
+          "addr": 149,
+          "word": 2,
+          "format": "float",
+          "alias": "交流電流"
+        },
+        {
+          "func": 3,
+          "addr": 151,
+          "word": 1,
+          "format": "float",
+          "alias": "交流頻率"
+        },
+        {
+          "func": 3,
+          "addr": 153,
+          "word": 2,
+          "format": "float",
+          "alias": "交流功率"
+        },
+        {
+          "func": 3,
+          "addr": 227,
+          "word": 2,
+          "format": "float",
+          "alias": "直流電量1"
+        }
+      ]
+    },
+    {
+      "name": "DC1500",
+      "addr": [
+        {
+          "func": 3,
+          "addr": 256,
+          "word": 1,
+          "format": "uint",
+          "alias": "#電池組電壓"
+        },
+        {
+          "func": 3,
+          "addr": 257,
+          "word": 1,
+          "format": "int",
+          "alias": "#電池組電流"
+        },
+        {
+          "func": 3,
+          "addr": 258,
+          "word": 1,
+          "format": "int",
+          "alias": "#電池組功率"
+        },
+        {
+          "func": 3,
+          "addr": 259,
+          "word": 1,
+          "format": "int",
+          "alias": "#電池組安時"
+        },
+        {
+          "func": 3,
+          "addr": 260,
+          "word": 1,
+          "format": "int",
+          "alias": "#電池組瓦時"
+        },
+        {
+          "func": 3,
+          "addr": 261,
+          "word": 1,
+          "format": "uint8",
+          "alias": "#電池組容量(SOC)"
+        },
+        {
+          "func": 3,
+          "addr": 272,
+          "word": 1,
+          "format": "int",
+          "alias": "#電池組_可充電量"
+        },
+        {
+          "func": 3,
+          "addr": 273,
+          "word": 1,
+          "format": "int",
+          "alias": "#電池組_可放電量"
+        },
+        {
+          "func": 3,
+          "addr": 274,
+          "word": 1,
+          "format": "int",
+          "alias": "#電池組_累計充電電量"
+        },
+        {
+          "func": 3,
+          "addr": 275,
+          "word": 1,
+          "format": "int",
+          "alias": "#電池組_累計放電電量"
+        },
+        {
+          "func": 3,
+          "addr": 768,
+          "word": 2,
+          "format": "int",
+          "alias": "#電池組狀態"
+        },
+        {
+          "func": 3,
+          "addr": 1280,
+          "word": 1,
+          "format": "uint",
+          "alias": "#電池芯_1電壓"
+        },
+        {
+          "func": 3,
+          "addr": 1281,
+          "word": 1,
+          "format": "uint",
+          "alias": "#電池芯_2電壓"
+        },
+        {
+          "func": 3,
+          "addr": 1282,
+          "word": 1,
+          "format": "uint",
+          "alias": "#電池芯_3電壓"
+        },
+        {
+          "func": 3,
+          "addr": 1283,
+          "word": 1,
+          "format": "uint",
+          "alias": "#電池芯_4電壓"
+        },
+        {
+          "func": 3,
+          "addr": 1536,
+          "word": 1,
+          "format": "uint8",
+          "alias": "##電池芯 溫度 1"
+        },
+        {
+          "func": 3,
+          "addr": 1537,
+          "word": 1,
+          "format": "uint8",
+          "alias": "##電池芯 溫度 2"
+        },
+        {
+          "func": 3,
+          "addr": 1538,
+          "word": 1,
+          "format": "uint8",
+          "alias": "##電池芯 溫度 3"
+        },
+        {
+          "func": 3,
+          "addr": 1539,
+          "word": 1,
+          "format": "uint8",
+          "alias": "##電池芯 溫度 4"
+        },
+      
+        {
+          "func": 3,
+          "addr": 3856,
+          "word": 1,
+          "format": "uint8",
+          "alias": "系統狀態"
+        }
+      ]
+    },
+    {
+      "name": "BREAKER",
+      "addr": [
+        {
+          "func": 6,
+          "addr": 800,
+          "word": 1,
+          "format": "float",
+          "alias": "pre1"
+        },
+        {
+          "func": 6,
+          "addr": 8001,
+          "word": 1,
+          "format": "float",
+          "alias": "pre2"
+        },
+        {
+          "func": 6,
+          "addr": 8002,
+          "word": 1,
+          "format": "float",
+          "alias": "pre3"
+        },
+        {
+          "func": 6,
+          "addr": 8003,
+          "word": 1,
+          "format": "float",
+          "alias": "pre4"
+        },
+        {
+          "func": 6,
+          "addr": 8004,
+          "word": 1,
+          "format": "float",
+          "alias": "pre5"
+        },
+        {
+          "func": 3,
+          "addr": 14200,
+          "word": 2,
+          "format": "float",
+          "alias": "iOF+SD24開關"
+        },
+        {
+          "func": 3,
+          "addr": 14240,
+          "word": 2,
+          "format": "float",
+          "alias": "iATL24電磁開關"
+        }
+      ]
+    }
+  ]
+}

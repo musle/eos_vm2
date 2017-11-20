@@ -1,0 +1,45 @@
+{
+    "showMsg": true,
+    "loop": 1,
+    "loopsleep": 1000,
+    "devisleep": 500,
+    "gssid": "1smsRQJYcZt3vT7IIOs-92OYWtfAL2wuTOt3S9CVZFbk",
+    "uploadraw": true,
+    "connect": [
+        {
+            "slave": "UN-PM5350",
+            "master": "NB2-TC1-TESTUNSLAVE",
+            "mode": "RTU",
+            "link": "自己",
+            "rtu": {
+                "port": "\\\\.\\COM25",
+                "baudRate": 19200,
+                "dataBits": 8,
+                "parityBit": "N",
+                "stopBits": 1
+            },
+            "tcp": "127.0.0.1:502",
+            "device": [
+                {
+                    "id": 2,
+                    "name": "UN-PM5350",
+                    "temp": "PM5350",
+                    "work": [
+                        [
+                            {
+                                "func": 3,
+                                "start": 2999,
+                                "length": 110
+                            },
+                            {
+                                "func": 3,
+                                "start": 3203,
+                                "length": 4
+                            }
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

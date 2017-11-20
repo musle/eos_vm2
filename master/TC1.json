@@ -1,0 +1,60 @@
+{
+    "showMsg": true,
+    "loop": 0,
+    "loopsleep": 1000,
+    "devisleep": 500,
+    "gssid": "",
+    "uploadraw": true,
+    "connect": [
+        {
+            "slave": "UN-DC1500",
+            "master": "NB2-TC1-TESTUNSLAVE",
+            "mode": "TCP",
+            "link": "自己",
+            "rtu": {
+                "port": "\\\\.\\COM25",
+                "baudRate": 19200,
+                "dataBits": 8,
+                "parityBit": "N",
+                "stopBits": 1
+            },
+            "tcp": "127.0.0.1:502",
+            "device": [
+                {
+                    "id": 51,
+                    "name": "UN-DC1500",
+                    "temp": "DC1500",
+                    "work": [
+                        [
+                            {
+                                "func": 3,
+                                "start": 255,
+                                "length": 21
+                            },
+                            {
+                                "func": 3,
+                                "start": 767,
+                                "length": 2
+                            },
+                            {
+                                "func": 3,
+                                "start": 1279,
+                                "length": 5
+                            },
+                            {
+                                "func": 3,
+                                "start": 1235,
+                                "length": 5
+                            },
+                            {
+                                "func": 3,
+                                "start": 3855,
+                                "length": 10
+                            }
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

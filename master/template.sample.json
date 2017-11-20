@@ -1,0 +1,16 @@
+{
+  "device": [
+    {
+      "name": "SAMPLE",
+      "addr": [
+        {
+          "func": 3,
+          "addr": 0,
+          "word": 4,
+          "format": "float",
+          "alias": "name"
+        }
+      ]
+    }
+  ]
+}

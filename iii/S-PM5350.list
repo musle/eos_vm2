@@ -1,0 +1,97 @@
+################################################################
+# 1.模組 99-GENNM 用來定義每個特定裝置類型的「雲端上傳資訊」和「暫存器資訊」。
+# [/etc/igw/tpl.99-GENNM.list]為樣版，新增一特定裝置類型時可以複製使用；
+# 每個特定裝置類型(e.g.裝置型號為 SAMPLE001)對應一個資訊檔 :
+#   [/etc/igw/99-GENNM/S-SAMPLE001.list]，
+# 其中檔名 S- 表示啟用此裝置類型；改成 K- 開頭則表示禁用，例如：
+#   [/etc/igw/99-GENNM/K-SAMPLE001.list]，
+# 2.此裝置類型目前有哪些裝置，則設定於 [/etc/igw/mbus.device.list]，例如：
+#  DEVICE=11:II11SAMPLE001-000111:SAMPLE001:/dev/ttymxc1
+#  DEVICE=12:II11SAMPLE001-000112:SAMPLE001:/dev/ttymxc2
+#  DEVICE=1:II11SAMPLE001-000101:SAMPLE001:000D6F000AA54607
+# 3.目前支援：
+#  a.使用標準Modbus的裝置；不支援非標準的。
+#  b.單純的裝置架構；不支援動態讀取裝置組態設定(例如子體裝置、工法、單位等)。
+#  c.繼電器控制(B02 控制 S25 的 attrId=62、S24 的 attrId=12)。
+################################################################
+VERSION=0.1.1
+
+#<CLOUD>
+# 定義此裝置類型，上傳雲端的資訊。一個資訊檔必須定義一個 CLOUD，目前最多只能一個。
+# CLOUD=<protocol>:<cmdId>:<mf>:<devType>:<devExtType>:<modelId>
+#  protocol   : 上傳到雲端使用的通訊協定。0=InSnergy-Gateway。
+#  cmdId      : 使用的指令。例如 InSnergy-Gateway protocol，支援的有 S25(單回路電表)|S16(感測器)|S19(照明)|S24(電力計)|S40(逆變器)|S29(發電組串)。
+#  mf         : 此類裝置的廠商代碼，固定兩碼，跟 devId[0,1]一樣。
+#  devType    : 此類裝置的裝置代碼，固定兩碼，跟 devId[2,3]一樣。
+#  devExtType : 此類裝置的擴充裝置代碼。若沒有，填 NULL 。
+#  modelId    : 此類裝置的型號，需跟此資訊檔案名稱的裝置型號一樣。
+#
+# 例如：
+# CLOUD=0:S16:II:21:2138:CY-GT200
+# CLOUD=0:S25:II:11:NULL:MIP3
+#</CLOUD>
+CLOUD=0:S25:IN:11:118:PM5350
+
+#<REG>
+# 定義此 Modbus 裝置類型，每個暫存器的資訊。
+# format of each line:
+# REG=<enable>:<addr>:<mbRFun>:<mbWFun>:<regType>:<dataBitmap>:<attrId>:<unitCvt>:<precise>:<action>
+#  enable  : 這行設定是否啟用。1=yes, 0=no.
+#  addr    : 暫存器的位址。例如 0x0001。
+#  mbRFun  : 讀取暫存器的function code。可以是 0x01|0x02|0x03|0x04。
+#  mbWFun  : 寫入暫存器的function code。可以是 0x05|0x06|0x0f|0x10|0x00，0x00 表示不支援。
+#  regType : b=bit-value(coil|discrete), w=2-byte-int(1 word), d=4-byte-int(2 words), t=6-byte-int(3 words), q=8-byte-int(4 words), f=4-byte-float(2 words), 4=4Q-FP-PF(2 words)
+#  dataBitmap : bit[0]   : 0=unsigned, 1=signed (if regType==w|d|t).
+#               bit[1]   : 0=big-endian(0123), 1=little-endian(3210) (if regType==w|d|t).
+#				bit[2]   : 0=write-no-check, 1=check-after-write (if mbWFun!=0x00)
+#               bit[4,5] : 0=byte-order-2301, 1=byte-order-0123, 2=byte-order-3210 (if regType==f).
+#				bit[8]   : 0=normal-grouping, 1=group-header (強制從此位址讀取).
+#  attrId  : InSnergy對應的屬性代碼，不可重複。
+#  unitCvt : 暫存器的數值轉換到雲端，要乘的單位。例如暫存器的單位為 0.1 V，雲端的單位為 V，此欄位就填 0.1 。
+#  precise : 到雲端資料顯示精確度到小數點後幾位，允許範圍 0~6，0表示整數。
+#  action  : 0=週期回報。
+#
+# 例如：
+# GT200 : 溶氧量=[0x0000], 溫度=[0x0002]
+# REG=1:0x0000:0x03:0x00:f:0x0010:33:1:2:0
+# REG=1:0x0002:0x03:0x00:f:0x0010:1:1:2:0
+# 電力計 : V=[0x0001], W=[0x0002], RelayStatus=[0x0010]
+# REG=1:0x0001:0x03:0x00:w:0x0000:1:0.1:1:0
+# REG=1:0x0002:0x03:0x00:d:0x0001:5:0.01:3:0
+# REG=1:0x0010:0x03:0x06:w:0x0000:12:1:0:0
+#</REG>
+REG=1:0x0BD4:0x03:0x00:f:0x0014:1001:1:2:0
+REG=1:0x0BD6:0x03:0x00:f:0x0014:2001:1:2:0
+REG=1:0x0BD8:0x03:0x00:f:0x0014:3001:1:2:0
+REG=1:0x0BDC:0x03:0x00:f:0x0014:1:1:2:0
+REG=1:0x0BCC:0x03:0x00:f:0x0014:1014:1:2:0
+REG=1:0x0BCE:0x03:0x00:f:0x0014:2014:1:2:0
+REG=1:0x0BD0:0x03:0x00:f:0x0014:3014:1:2:0
+REG=1:0x0BD2:0x03:0x00:f:0x0014:53:1:2:0
+REG=1:0x0BB8:0x03:0x00:f:0x0014:1002:1:2:0
+REG=1:0x0BBA:0x03:0x00:f:0x0014:2002:1:2:0
+REG=1:0x0BBC:0x03:0x00:f:0x0014:3002:1:2:0
+REG=1:0x0BC2:0x03:0x00:f:0x0014:2:1:2:0
+REG=1:0x0BEE:0x03:0x00:f:0x0014:1005:1000:2:0
+REG=1:0x0BF0:0x03:0x00:f:0x0014:2005:1000:2:0
+REG=1:0x0BF2:0x03:0x00:f:0x0014:3005:1000:2:0
+REG=1:0x0BF4:0x03:0x00:f:0x0014:5:1000:2:0
+REG=1:0x0BFE:0x03:0x00:f:0x0014:1006:1000:2:0
+REG=1:0x0C00:0x03:0x00:f:0x0014:2006:1000:2:0
+REG=1:0x0C02:0x03:0x00:f:0x0014:3006:1000:2:0
+REG=1:0x0C04:0x03:0x00:f:0x0014:6:1000:2:0
+REG=1:0x0BF6:0x03:0x00:f:0x0014:1007:1:2:0
+REG=1:0x0BF8:0x03:0x00:f:0x0014:2007:1:2:0
+REG=1:0x0BFA:0x03:0x00:f:0x0014:3007:1:2:0
+REG=1:0x0BFC:0x03:0x00:f:0x0014:7:1:2:0
+REG=1:0x0C84:0x03:0x00:q:0x0014:8:1:2:0
+REG=1:0x0C06:0x03:0x00:4:0x0014:1004:1:2:0
+REG=1:0x0C08:0x03:0x00:4:0x0014:2004:1:2:0
+REG=1:0x0C0A:0x03:0x00:4:0x0014:3004:1:2:0
+REG=1:0x0C0C:0x03:0x00:4:0x0014:4:1:2:0
+REG=1:0x0C26:0x03:0x00:f:0x0014:3:1:2:0
+
+################################################################
+# end of information
+################################################################
+

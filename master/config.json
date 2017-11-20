@@ -1,0 +1,41 @@
+{
+    "showMsg": true,
+    "loop": 0,
+    "loopsleep": 0,
+    "devisleep": 0,
+    "worksleep": 1000,
+    "gssid": "",
+    "uploadraw": true,
+    "connect": [
+        {
+            "slave": "U-DC1500",
+            "master": "NB2-TC1-TESTUNSLAVE",
+            "mode": "TCP",
+            "link": "自己",
+            "rtu": {
+                "port": "\\\\.\\COM25",
+                "baudRate": 19200,
+                "dataBits": 8,
+                "parityBit": "N",
+                "stopBits": 1
+            },
+            "tcp": "127.0.0.1:502",
+            "device": [
+                {
+                    "id": 88,
+                    "name": "U-DC1500",
+                    "temp": "DC1500",
+                    "work": [
+                        [
+                            {
+                                "func": 3,
+                                "start": 768,
+                                "length": 1
+                            }
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

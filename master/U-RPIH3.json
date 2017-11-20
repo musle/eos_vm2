@@ -1,0 +1,88 @@
+{
+    "showMsg": true,
+    "loop": 1,
+    "loopsleep": 1000,
+    "devisleep": 500,
+    "gssid": "1smsRQJYcZt3vT7IIOs-92OYWtfAL2wuTOt3S9CVZFbk",
+    "uploadraw": true,
+    "connect": [
+        {
+            "slave": "UNVM31",
+            "master": "NB2-TC1-TESTUNSLAVE",
+            "mode": "TCP",
+            "link": "19200",
+            "rtu": {
+                "port": "\\\\.\\COM25",
+                "baudRate": 19200,
+                "dataBits": 8,
+                "parityBit": "N",
+                "stopBits": 1
+            },
+            "tcp": "127.0.0.1:502",
+            "device": [
+                {
+                    "id": 33,
+                    "name": "VM31-GRID",
+                    "temp": "RPIH3-GRID",
+                    "work": [
+                        [
+                            {
+                                "func": 6,
+                                "start": 800,
+                                "value": 0
+                            }
+                        ],
+                        [
+                            {
+                                "func": 3,
+                                "start": 1047,
+                                "length": 3
+                            },
+                            {
+                                "func": 3,
+                                "start": 1056,
+                                "length": 8
+                            },
+                            {
+                                "func": 3,
+                                "start": 1075,
+                                "length": 10
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "id": 32,
+                    "name": "VM31-DC1",
+                    "temp": "RPIH3-DC1",
+                    "work": [
+                        [
+                            {
+                                "func": 6,
+                                "start": 800,
+                                "value": 0
+                            }
+                        ],
+                        [
+                            {
+                                "func": 3,
+                                "start": 1047,
+                                "length": 3
+                            },
+                            {
+                                "func": 3,
+                                "start": 1056,
+                                "length": 8
+                            },
+                            {
+                                "func": 3,
+                                "start": 1075,
+                                "length": 10
+                            }
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

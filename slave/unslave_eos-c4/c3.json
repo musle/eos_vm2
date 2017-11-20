@@ -1,0 +1,438 @@
+{
+  "version": "3.0.3",
+  /* 1111
+  newman run cl1.json --delay-request 5000
+  https://gregstoll.dyndns.org/~gregstoll/floattohex/ */
+  "mode": "RTU",
+  /* Serial port 3,4,5,6 settings (for RTU mode only) */
+  "port": {
+    "name": "COM3",
+    "baudRate": 19200,
+    "dataBits": 8,
+    "parity": "none",
+    "stopBits": 1
+  },
+  /* Frame Delay Override */
+  /* the amount of time in ms at the end of the frame (null for default) */
+  "frameDelay": 100,
+  "tcpPort": 502,
+  "slaves": {
+    "1": { /* PM5350  */
+      "isOnline": true,
+      "registers": {
+        /*
+        "HR2999": "0x435c",
+        "HR3001": "0x436c",
+        "HR3003": "0x437c",       
+        "HR3206": "0x28f2",
+        "HR3077": "0xbe31",
+        "HR3078": "0x8b0d",
+        "HR3079": "0x3fa7",
+        "HR3080": "0xca4b",
+        "HR3081": "0xbfec",
+        "HR3082": "0x1816",
+        "HR3083": "0x3fc5",
+        "HR3084": "0x3112",  */
+        "HR2999": "0x3f62",
+        "HR3001": "0x3ee3",
+        "HR3003": "0x3f66",
+        "HR3009": "0x3f3e",
+        "HR3019": "0x434c",
+        "HR3021": "0x434b",
+        "HR3023": "0x434c",
+        "HR3025": "0x434c",
+        "HR3027": "0x42ec",
+        "HR3029": "0x42ea",
+        "HR3031": "0x42ec",
+        "HR3035": "0x42eb",
+        "HR3053": "0x3d04",
+        "HR3055": "0xbb5f",
+        "HR3057": "0xbcc4",
+        "HR3059": "0x3ba3",
+        "HR3061": "0xbdcb",
+        "HR3063": "0xbd55",
+        "HR3065": "0xbdd5",
+        "HR3067": "0xbe82",
+        "HR3069": "0x3dd6",
+        "HR3071": "0x3d55",
+        "HR3073": "0x3e82",
+        "HR3075": "0x3fd8",
+        "HR3077": "0xbd85",
+        "HR3079": "0xbe65",
+        "HR3081": "0x3ffd",
+        "HR3083": "0x426f",
+        "HR3203": "0x0000",
+        "HR3000": "0xb4a5",
+        "HR3002": "0x8e7d",
+        "HR3004": "0xd656",
+        "HR3010": "0x70bd",
+        "HR3020": "0x0ea0",
+        "HR3022": "0xc82d",
+        "HR3024": "0xd65e",
+        "HR3026": "0x39b8",
+        "HR3028": "0x2430",
+        "HR3030": "0x8a34",
+        "HR3032": "0xc922",
+        "HR3036": "0xd283",
+        "HR3054": "0x98b6",
+        "HR3056": "0x72dd",
+        "HR3058": "0x67a0",
+        "HR3060": "0x6dc0",
+        "HR3062": "0x9ddf",
+        "HR3064": "0x06ee",
+        "HR3066": "0x0d09",
+        "HR3068": "0xcb98",
+        "HR3070": "0x2368",
+        "HR3072": "0x7bff",
+        "HR3074": "0xd1fa",
+        "HR3076": "0x5edd",
+        "HR3078": "0xf959",
+        "HR3080": "0xf84d",
+        "HR3082": "0x805e",
+        "HR3084": "0xa0a0",
+        "HR3204": "0x0000",
+        "HR3206": "0x28f2",
+        /* Setup Modbus exception response */
+        "HR999": {
+          "exception": 3
+        },
+        /* Setup Input Registers */
+        "IR1": 1,
+        "IR2": 2,
+        /* Setup Coils*/
+        "C0": false,
+        "C1": true,
+        /* Setup Discrete Inputs*/
+        "DI1": true,
+        "DI2": false
+      }
+    },
+    "2": { /* DM2436  */
+      "isOnline": true,
+      "registers": {
+        "HR2": "0x0001",
+        "HR6": "0x0000",
+        "HR10": "0x0000",
+        "HR14": "0x0000",
+        "HR18": "0x0000",
+        "HR22": "0x0000",
+        "HR26": "0x0000",
+        "HR30": "0x0000",
+        "HR38": "0x0001",
+        "HR42": "0x0000",
+        "HR46": "0x0000",
+        "HR50": "0x0000",
+        "HR54": "0x0000",
+        "HR58": "0x0000",
+        "HR66": "0x0000",
+        "HR74": "0x0001",
+        "HR78": "0x0000",
+        "HR82": "0x0000",
+        "HR86": "0x0000",
+        "HR90": "0x0000",
+        "HR94": "0x0000",
+        "HR102": "0x0000",
+        "HR110": "0x0003",
+        "HR114": "0x0000",
+        "HR118": "0x0000",
+        "HR122": "0x0000",
+        "HR126": "0x0000",
+        "HR130": "0x0000",
+        "HR134": "0x0000",
+        "HR142": "0x0003",
+        "HR146": "0x0003",
+        "HR150": "0x0003",
+        "HR3": "0xcd00",
+        "HR7": "0x0000",
+        "HR11": "0x0000",
+        "HR15": "0x0000",
+        "HR19": "0x0000",
+        "HR23": "0x0000",
+        "HR27": "0xea6a",
+        "HR31": "0x2404",
+        "HR39": "0xca00",
+        "HR43": "0x0000",
+        "HR47": "0x0000",
+        "HR51": "0x0000",
+        "HR55": "0x0000",
+        "HR59": "0x0000",
+        "HR67": "0x0000",
+        "HR75": "0xce54",
+        "HR79": "0x0000",
+        "HR83": "0x0000",
+        "HR87": "0x0000",
+        "HR91": "0x0000",
+        "HR95": "0x0000",
+        "HR103": "0x210e",
+        "HR111": "0x1d90",
+        "HR115": "0x0000",
+        "HR119": "0x0000",
+        "HR123": "0x0000",
+        "HR127": "0x0000",
+        "HR131": "0x0000",
+        "HR135": "0x4512",
+        "HR143": "0x1c60",
+        "HR147": "0x1c20",
+        "HR151": "0x2048",
+        /* Setup Modbus exception response */
+        "HR999": {
+          "exception": 3
+        },
+        /* Setup Input Registers */
+        "IR1": 1,
+        "IR2": 2,
+        /* Setup Coils*/
+        "C0": false,
+        "C1": true,
+        /* Setup Discrete Inputs*/
+        "DI1": true,
+        "DI2": false
+      }
+    },
+    "4": { /* 士林電機電錶(SPM230)  */
+      "isOnline": true,
+      "registers": {
+        "HR1151": "0xbcd9",
+        "HR1161": "0x3b60",
+        "HR1171": "0xbdca",
+        "HR1039": "0x4197",
+        "HR1041": "0x421e",
+        "HR1043": "0x434b",
+        "HR1045": "0x434b",
+        "HR1031": "0x3f61",
+        "HR1033": "0x3f3a",
+        "HR1035": "0x41a6",
+        "HR1037": "0x421e",
+        "HR1023": "0x3f61",
+        "HR1025": "0x3ee0",
+        "HR1027": "0x3f5d",
+        "HR1029": "0x3f61",
+        "HR1051": "0x434c",
+        "HR1053": "0x42ec",
+        "HR1055": "0x42ea",
+        "HR1057": "0x42ec",
+        "HR1059": "0x42ec",
+        "HR1061": "0x42eb",
+        "HR1063": "0x3e0f",
+        "HR1065": "0x3e4c",
+        "HR1067": "0x3eae",
+        "HR1069": "0x3eae",
+        "HR1071": "0x3da3",
+        "HR1073": "0x3f02",
+        "HR1075": "0x3edc",
+        "HR1077": "0x3cfd",
+        "HR1079": "0x3cfd",
+        "HR1081": "0xba6f",
+        "HR1049": "0x434c",
+        "HR1181": "0xbd52",
+        "HR1152": "0xa1dc",
+        "HR1162": "0x5c90",
+        "HR1172": "0xceef",
+        "HR1040": "0xae14",
+        "HR1042": "0xe148",
+        "HR1044": "0xf1f5",
+        "HR1046": "0xd3cc",
+        "HR1032": "0x0b6b",
+        "HR1034": "0x5d0b",
+        "HR1036": "0x147b",
+        "HR1038": "0xe148",
+        "HR1024": "0x0b54",
+        "HR1026": "0xb238",
+        "HR1028": "0xb2b1",
+        "HR1030": "0x0d5f",
+        "HR1052": "0x3bcc",
+        "HR1054": "0x037a",
+        "HR1056": "0xa0d2",
+        "HR1058": "0xda38",
+        "HR1060": "0xda38",
+        "HR1062": "0xd4d7",
+        "HR1064": "0x5c29",
+        "HR1066": "0xcccd",
+        "HR1068": "0x147b",
+        "HR1070": "0x147b",
+        "HR1072": "0xd70a",
+        "HR1074": "0x8f5c",
+        "HR1076": "0x28f6",
+        "HR1078": "0x27ca",
+        "HR1080": "0x27ca",
+        "HR1082": "0x4b86",
+        "HR1050": "0xeda4",
+        "HR1182": "0xd8da",
+        /* Setup Modbus exception response */
+        "HR999": {
+          "exception": 3
+        },
+        /* Setup Input Registers */
+        "IR1": 1,
+        "IR2": 2,
+        /* Setup Coils*/
+        "C0": false,
+        "C1": true,
+        /* Setup Discrete Inputs*/
+        "DI1": true,
+        "DI2": false
+      }
+    },
+    "41": { /* 施耐德單三逆變器(Conext-XW+) -4  */
+      "isOnline": true,
+      "registers": {
+        "HR141": "0x006e",
+        "HR143": "0x00dc",
+        "HR145": "0x0003",
+        "HR147": "0x0001",
+        "HR79": "0x006e",
+        "HR139": "0x00dd",
+        "HR81": "0x0002",
+        "HR149": "0x0002",
+        "HR83": "0x00de",
+        "HR153": "0x0000",
+        "HR151": "0x0032",
+        "HR227": "0x01f4",
+        "HR85": "0x0050",
+        "HR154": "0x01b8",
+        /* Setup Modbus exception response */
+        "HR999": {
+          "exception": 3
+        },
+        /* Setup Input Registers */
+        "IR1": 1,
+        "IR2": 2,
+        /* Setup Coils*/
+        "C0": false,
+        "C1": true,
+        /* Setup Discrete Inputs*/
+        "DI1": true,
+        "DI2": false
+      }
+    },
+    "31": { /* RPI-H3 GRID 800=0  */
+      "isOnline": true,
+      "registers": {
+        "HR1056": "0x0815",
+        "HR1057": "0x0000",
+        "HR1058": "0x0000",
+        "HR1059": "0x1774",
+        "HR1075": "0x0CBB",
+        "HR1079": "0x0030",
+        "HR1080": "0x0028",
+        "HR1081": "0x002E",
+        /* Setup Modbus exception response */
+        "HR999": {
+          "exception": 3
+        },
+        /* Setup Input Registers */
+        "IR1": 1,
+        "IR2": 2,
+        /* Setup Coils*/
+        "C0": false,
+        "C1": true,
+        /* Setup Discrete Inputs*/
+        "DI1": true,
+        "DI2": false
+      }
+    },
+    "32": { /* RPI-H3 GRID 800=48 */
+      "isOnline": true,
+      "registers": {
+        "HR1056": "0x0815",
+        "HR1057": "0x0000",
+        "HR1058": "0x0000",
+        "HR1059": "0x1774",
+        "HR1075": "0x0CBB",
+        "HR1079": "0x0030",
+        "HR1080": "0x0028",
+        "HR1081": "0x002E",
+        /* Setup Modbus exception response */
+        "HR999": {
+          "exception": 3
+        },
+        /* Setup Input Registers */
+        "IR1": 1,
+        "IR2": 2,
+        /* Setup Coils*/
+        "C0": false,
+        "C1": true,
+        /* Setup Discrete Inputs*/
+        "DI1": true,
+        "DI2": false
+      }
+    },
+    "33": { /* RPI-H3 GRID 800=0  */
+      "isOnline": true,
+      "registers": {
+        "HR1056": "0x0815",
+        "HR1057": "0x0030",
+        "HR1058": "0x03e1",
+        "HR1059": "0x1774",
+        "HR1075": "0x0CBB",
+        "HR1079": "0x0030",
+        "HR1080": "0x0028",
+        "HR1081": "0x002E",
+        /* Setup Modbus exception response */
+        "HR999": {
+          "exception": 3
+        },
+        /* Setup Input Registers */
+        "IR1": 1,
+        "IR2": 2,
+        /* Setup Coils*/
+        "C0": false,
+        "C1": true,
+        /* Setup Discrete Inputs*/
+        "DI1": true,
+        "DI2": false
+      }
+    },
+    "51": { /* DC1500 */
+      "isOnline": true,
+      "registers": {
+        "HR255":"0x00D7",
+        "HR256":"0x000F",
+        "HR257":"0x0A14",
+        "HR258":"0x0438",
+        "HR259":"0x0A14",
+        "HR260":"0x0050",
+        "HR271":"0x0096",
+        "HR272":"0x0096",
+        "HR273":"0x0096",
+        "HR274":"0x0096",
+        "HR767":"0x0001",
+        "HR1279":"0x0005",
+        "HR1280":"0x0005",
+        "HR1281":"0x0005",
+        "HR1282":"0x0005",
+        "HR1535":"0x002D",
+        "HR1536":"0x002D",
+        "HR1537":"0x002D",
+        "HR1538":"0x002D",
+        "HR3855":"0xBBBB",
+        "HR3858":"0x00D7",
+        "HR3859":"0x000F",
+        "HR3860":"0x017C",
+        "HR3861":"0x004B",
+        "HR3862":"0x004B",
+        "HR3863":"0x0004",
+        /* Setup Modbus exception response */
+        "HR999": {
+          "exception": 3
+        },
+        /* Setup Input Registers */
+        "IR1": 1,
+        "IR2": 2,
+        /* Setup Coils*/
+        "C0": false,
+        "C1": true,
+        /* Setup Discrete Inputs*/
+        "DI1": true,
+        "DI2": false
+      }
+    }
+  },
+  /* HTTP API settings */
+  /* use the API to modify configuration at runtime */
+  "api": {
+    /* set to 'true' to enable the API endpoint */
+    "enable": true,
+    "port": 9002
+  }
+}

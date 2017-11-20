@@ -1,0 +1,34 @@
+{
+  "count" : "5",
+  "drivers":
+    [{
+      "hwinfo":"Schneider Electric PM5350",
+      "drivername":"11-PM5350",
+      "newfwversion":"v0.1.0",
+      "newfwurl":"http://192.168.123.150:9500/driver_sync/S-PM5350.list"
+    },
+    {
+      "hwinfo":"Chitai DM2436",
+      "drivername":"11-DM2436",
+      "newfwversion":"v0.1.0",
+      "newfwurl":"http://192.168.123.150:9500/driver_sync/S-DM2436.list"
+    },
+    {
+      "hwinfo":"SEEC SPM-230",
+      "drivername":"11-SPM230",
+      "newfwversion":"v0.1.0",
+      "newfwurl":"http://192.168.123.150:9500/driver_sync/S-SPM-230.list"
+    },
+    {
+      "hwinfo":"Schneider Electric Conext TL",
+      "drivername":"33-ConextTL",
+      "newfwversion":"v0.1.0",
+      "newfwurl":"http://192.168.123.150:9500/driver_sync/S-Conext_TL.list"
+    },
+    {
+      "hwinfo":"Delta RPI-H3",
+      "drivername":"33-RPIH3",
+      "newfwversion":"v0.1.0",
+      "newfwurl":"http://192.168.123.150:9500/driver_sync/S-RPI-H3.list"
+    }]
+}

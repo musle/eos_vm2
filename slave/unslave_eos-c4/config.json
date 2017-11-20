@@ -1,0 +1,150 @@
+{
+  "version": "3.0.3",
+  /* 2222
+  newman run cl1.json --delay-request 5000
+  https://gregstoll.dyndns.org/~gregstoll/floattohex/ */
+  "mode": "RTU",
+  /* Serial port 3,4,5,6 settings (for RTU mode only) */
+  "port": {
+    "name": "COM2",
+    "baudRate": 19200,
+    "dataBits": 8,
+    "parity": "none",
+    "stopBits": 1
+  },
+  /* Frame Delay Override */
+  /* the amount of time in ms at the end of the frame (null for default) */
+  "frameDelay": 10,
+  "tcpPort": 502,
+  "slaves": {
+    "2": { /* PM5350  */
+      "isOnline": true,
+      "registers": {
+        /*
+        "HR2999": "0x435c",
+        "HR3001": "0x436c",
+        "HR3003": "0x437c",       
+        "HR3206": "0x28f2", */
+        "HR3077": "0xbe31",
+        "HR3078": "0x8b0d",
+        "HR3079": "0x3fa7",
+        "HR3080": "0xca4b",
+        "HR3081": "0xbfec",
+        "HR3082": "0x1816",
+        "HR3083": "0x3fc5",
+       /*  "HR3084": "0x3112", 
+        "HR2999": "0x3f62",
+        "HR3001": "0x3ee3",
+        "HR3003": "0x3f66",
+        "HR3009": "0x3f3e", */
+        "HR3019": "0x434c",
+        "HR3021": "0x434b",
+        "HR3023": "0x434c",
+        "HR3025": "0x434c",
+        "HR3027": "0x42ec",
+        "HR3029": "0x42ea",
+        "HR3031": "0x42ec",
+        "HR3035": "0x42eb",
+        "HR3053": "0x3d04",
+        "HR3055": "0xbb5f",
+        "HR3057": "0xbcc4",
+        "HR3059": "0x3ba3",
+        "HR3061": "0xbdcb",
+        "HR3063": "0xbd55",
+        "HR3065": "0xbdd5",
+        "HR3067": "0xbe82",
+        "HR3069": "0x3dd6",
+        "HR3071": "0x3d55",
+        "HR3073": "0x3e82",
+        "HR3075": "0x3fd8",
+       /*  "HR3077": "0xbd85",
+        "HR3079": "0xbe65",
+        "HR3081": "0x3ffd",
+        "HR3083": "0x426f", */
+        "HR3203": "0x0000",
+        "HR3000": "0xb4a5",
+        "HR3002": "0x8e7d",
+        "HR3004": "0xd656",
+        "HR3010": "0x70bd",
+        "HR3020": "0x0ea0",
+        "HR3022": "0xc82d",
+        "HR3024": "0xd65e",
+        "HR3026": "0x39b8",
+        "HR3028": "0x2430",
+        "HR3030": "0x8a34",
+        "HR3032": "0xc922",
+        "HR3036": "0xd283",
+        "HR3054": "0x98b6",
+        "HR3056": "0x72dd",
+        "HR3058": "0x67a0",
+        "HR3060": "0x6dc0",
+        "HR3062": "0x9ddf",
+        "HR3064": "0x06ee",
+        "HR3066": "0x0d09",
+        "HR3068": "0xcb98",
+        "HR3070": "0x2368",
+        "HR3072": "0x7bff",
+        "HR3074": "0xd1fa",
+        "HR3076": "0x5edd",
+        "HR3078": "0xf959",
+        "HR3080": "0xf84d",
+        "HR3082": "0x805e",
+        "HR3084": "0xa0a0",
+        "HR3204": "0x0000",
+        "HR3206": "0x28f2",
+        /* Setup Modbus exception response */
+        "HR999": {
+          "exception": 3
+        },
+        /* Setup Input Registers */
+        "IR1": 1,
+        "IR2": 2,
+        /* Setup Coils*/
+        "C0": false,
+        "C1": true,
+        /* Setup Discrete Inputs*/
+        "DI1": true,
+        "DI2": false
+      }
+    },
+    "4": { /* 施耐德單三逆變器(Conext-XW+) -4  */
+      "isOnline": true,
+      "registers": {
+        "HR141": "0x006e",
+        "HR143": "0x00dc",
+        "HR145": "0x0003",
+        "HR147": "0x0001",
+        "HR79": "0x006e",
+        "HR139": "0x00dd",
+        "HR81": "0x0002",
+        "HR149": "0x0002",
+        "HR83": "0x00de",
+        "HR153": "0x0000",
+        "HR151": "0x0032",
+        "HR227": "0x01f4",
+        "HR85": "0x0050",
+        "HR154": "0x01b8",
+        /* Setup Modbus exception response */
+        "HR999": {
+          "exception": 3
+        },
+        /* Setup Input Registers */
+        "IR1": 1,
+        "IR2": 2,
+        /* Setup Coils*/
+        "C0": false,
+        "C1": true,
+        /* Setup Discrete Inputs*/
+        "DI1": true,
+        "DI2": false
+      }
+    }
+  },
+  /* HTTP API settings */
+  /* use the API to modify configuration at runtime */
+  "api": {
+    /* set to 'true' to enable the API endpoint */
+    "enable": true,
+    "port": 9004
+  }
+}

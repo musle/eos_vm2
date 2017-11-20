@@ -1,0 +1,413 @@
+{
+  "info": {
+    "name": "UnSlave",
+    "_postman_id": "dbc39fca-db09-51ad-7aed-9c3971ee955f",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"0x4856\"}"
+        },
+        "url": {
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9003",
+          "path": [
+            "slaves",
+            "2",
+            "registers",
+            "HR108"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"0xD800\"}"
+        },
+        "url": {
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9003",
+          "path": [
+            "slaves",
+            "2",
+            "registers",
+            "HR109"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"0x44FA\"}"
+        },
+        "url": {
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9003",
+          "path": [
+            "slaves",
+            "2",
+            "registers",
+            "HR112"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"0x4E7C\"}"
+        },
+        "url": {
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9003",
+          "path": [
+            "slaves",
+            "2",
+            "registers",
+            "HR116"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"0xBE26\"}"
+        },
+        "url": {
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9003",
+          "path": [
+            "slaves",
+            "2",
+            "registers",
+            "HR117"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"0x4C20\"}"
+        },
+        "url": {
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9003",
+          "path": [
+            "slaves",
+            "2",
+            "registers",
+            "HR120"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"0x9CCC\"}"
+        },
+        "url": {
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9003",
+          "path": [
+            "slaves",
+            "2",
+            "registers",
+            "HR121"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"0x4CCF\"}"
+        },
+        "url": {
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9003",
+          "path": [
+            "slaves",
+            "2",
+            "registers",
+            "HR124"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"0x9B6C\"}"
+        },
+        "url": {
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9003",
+          "path": [
+            "slaves",
+            "2",
+            "registers",
+            "HR125"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"0x3F59\"}"
+        },
+        "url": {
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9003",
+          "path": [
+            "slaves",
+            "2",
+            "registers",
+            "HR128"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"0xDB23\"}"
+        },
+        "url": {
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9003",
+          "path": [
+            "slaves",
+            "2",
+            "registers",
+            "HR129"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"0x461C\"}"
+        },
+        "url": {
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9003",
+          "path": [
+            "slaves",
+            "2",
+            "registers",
+            "HR132"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    },
+    {
+      "name": "",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"value\": \"0x4000\"}"
+        },
+        "url": {
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9003",
+          "path": [
+            "slaves",
+            "2",
+            "registers",
+            "HR132"
+          ]
+        },
+        "description": ""
+      },
+      "response": []
+    }
+  ]
+}

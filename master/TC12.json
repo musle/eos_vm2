@@ -1,0 +1,247 @@
+{
+    "showMsg": true,
+    "loop": 0,
+    "loopsleep": 180000,
+    "devisleep": 30000,
+    "gssid": "1smsRQJYcZt3vT7IIOs-92OYWtfAL2wuTOt3S9CVZFbk",
+    "uploadraw": false,
+    "connect": [
+        {
+            "slave": "EOS-Multi-vm",
+            "master": "L001-TC12-Loop3分鐘-dev30秒,分出Grid/DC1 and辨識充放電",
+            "mode": "TCP",
+            "link": "myself",
+            "rtu": {
+                "port": "\\\\.\\COM1",
+                "baudRate": 19200,
+                "dataBits": 8,
+                "parityBit": "N",
+                "stopBits": 1
+            },
+            "tcp": "127.0.0.1:502",
+            "device": [
+                {
+                    "id": 31,
+                    "name": "VM31-GRID",
+                    "temp": "RPIH3-GRID",
+                    "work": [
+                        [
+                            {
+                                "func": 6,
+                                "start": 800,
+                                "value": 0
+                            }
+                        ],
+                        [
+                            {
+                                "func": 3,
+                                "start": 1047,
+                                "length": 3
+                            },
+                            {
+                                "func": 3,
+                                "start": 1056,
+                                "length": 5
+                            },
+                            {
+                                "func": 3,
+                                "start": 1075,
+                                "length": 8
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "id": 21,
+                    "name": "VM21",
+                    "temp": "PM5350",
+                    "work": [
+                        [
+                            {
+                                "func": 3,
+                                "start": 2999,
+                                "length": 110
+                            }
+                        ],
+                        [
+                            {
+                                "func": 3,
+                                "start": 3203,
+                                "length": 4
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "id": 31,
+                    "name": "VM31-DC1",
+                    "temp": "RPIH3-DC1",
+                    "work": [
+                        [
+                            {
+                                "func": 6,
+                                "start": 800,
+                                "value": 48
+                            }
+                        ],
+                        [
+                            {
+                                "func": 3,
+                                "start": 1047,
+                                "length": 3
+                            },
+                            {
+                                "func": 3,
+                                "start": 1056,
+                                "length": 5
+                            },
+                            {
+                                "func": 3,
+                                "start": 1075,
+                                "length": 8
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "id": 51,
+                    "name": "VM51",
+                    "temp": "DC1500",
+                    "work": [
+                        [
+                            {
+                                "func": 3,
+                                "start": 255,
+                                "length": 8
+                            },
+                            {
+                                "func": 3,
+                                "start": 271,
+                                "length": 5
+                            }
+                        ],
+                        [
+                            {
+                                "func": 3,
+                                "start": 767,
+                                "length": 2
+                            },
+                            {
+                                "func": 3,
+                                "start": 1278,
+                                "length": 6
+                            },
+                            {
+                                "func": 3,
+                                "start": 1535,
+                                "length": 5
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "id": 71,
+                    "name": "VM71-ON",
+                    "temp": "BREAKER",
+                    "work": [
+                        [
+                            {
+                                "func": 6,
+                                "start": 8000,
+                                "value": 10
+                            },
+                            {
+                                "func": 6,
+                                "start": 8001,
+                                "value": 4353
+                            },
+                            {
+                                "func": 6,
+                                "start": 8002,
+                                "value": 1
+                            },
+                            {
+                                "func": 6,
+                                "start": 8003,
+                                "value": 4353
+                            },
+                            {
+                                "func": 6,
+                                "start": 8004,
+                                "value": 4353
+                            },
+                            {
+                                "func": 3,
+                                "start": 8000,
+                                "value": 904
+                            }
+                        ],
+                        [
+                            {
+                                "func": 3,
+                                "start": 14200,
+                                "length": 2
+                            },
+                            {
+                                "func": 3,
+                                "start": 14240,
+                                "length": 2
+                            }
+                        ]
+                    ]
+                },
+                {
+                    "id": 72,
+                    "name": "VM72-OFF",
+                    "temp": "BREAKER",
+                    "work": [
+                        [
+                            {
+                                "func": 6,
+                                "start": 8000,
+                                "value": 10
+                            },
+                            {
+                                "func": 6,
+                                "start": 8001,
+                                "value": 4353
+                            },
+                            {
+                                "func": 6,
+                                "start": 8002,
+                                "value": 1
+                            },
+                            {
+                                "func": 6,
+                                "start": 8003,
+                                "value": 4353
+                            },
+                            {
+                                "func": 6,
+                                "start": 8004,
+                                "value": 4353
+                            },
+                            {
+                                "func": 3,
+                                "start": 8000,
+                                "value": 905
+                            }
+                        ],
+                        [
+                            {
+                                "func": 3,
+                                "start": 14200,
+                                "length": 2
+                            },
+                            {
+                                "func": 3,
+                                "start": 14240,
+                                "length": 2
+                            }
+                        ]
+                    ]
+                }
+            ]
+        }
+    ]
+}

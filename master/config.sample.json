@@ -1,0 +1,46 @@
+{
+  "showmsg": true,
+  "loop": 0,
+  "loopsleep": 0,
+  "devisleep": 0,
+  "worksleep": 0,
+  "gssid": "",
+  "uploadraw": false,
+  "connect": [
+    {
+      "master": "",
+      "slave": "",
+      "link": "",
+      "mode": "TCP",
+      "rtu": {
+        "port": "\\\\.\\COM1",
+        "baudRate": 9600,
+        "dataBits": 8,
+        "parityBit": "N",
+        "stopBits": 1
+      },
+      "tcp": "localhost:502",
+      "device": [
+        {
+          "id": 1,
+          "name": "SAMPLE",
+          "temp": "SAMPLE",
+          "work": [
+            [
+              {
+                "func": 6,
+                "start": 0,
+                "value": 0
+              },
+              {
+                "func": 4,
+                "start": 0,
+                "length": 10
+              }
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}
